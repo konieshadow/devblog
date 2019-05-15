@@ -1,4 +1,5 @@
 # DevBlog
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d902a8c7-e8e4-4476-8884-f4cc61451d5b/deploy-status)](https://app.netlify.com/sites/comellia/deploys)
 
 DevBlog is a fully customizable blog template designed for developers (or anyone else) wanting to get into blogging. It comes ready to go and deploy (with ease) or can be edited and extended however you like. The blog is completely statically generated via GatsbyJS, comes with syntax highlighting (via PrismJS) out of the box, and has server-side rendering built-in, among other things.
 
