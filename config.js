@@ -1,10 +1,10 @@
 module.exports = {
   title: '柯弥林', // Required
   author: '康尼', // Required
-  description: 'Konie\'s Blog',
+  description: '柯弥林',
   primaryColor: '#cdb16d', // Required
-  showHeaderImage: true,
-  showShareButtons: true,
+  showHeaderImage: false,
+  showShareButtons: false,
   postsPerPage: 5, // Required
   social: {
   },
