@@ -4,6 +4,7 @@ import get from 'lodash/get';
 import React from 'react';
 import 'gitalk/dist/gitalk.css';
 import Gitalk from 'gitalk';
+import md5 from 'md5';
 
 import userConfig from '../../config';
 
@@ -27,7 +28,7 @@ class BlogPostTemplate extends React.Component {
       repo: 'blog-talk',
       owner: 'konieshadow',
       admin: ['konieshadow'],
-      id: 'comellia.com',      // Ensure uniqueness and length less than 50
+      id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
     })
     
