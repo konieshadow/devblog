@@ -2,6 +2,8 @@ import {graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import React from 'react';
+import 'gitalk/dist/gitalk.css';
+import Gitalk from 'gitalk';
 
 import userConfig from '../../config';
 
@@ -17,6 +19,21 @@ import PageNav from '../components/PageNav';
 import Share from '../components/Share';
 
 class BlogPostTemplate extends React.Component {
+
+  componentDidMount() {
+    var gitalk = new Gitalk({
+      clientID: '291b9624525910076061',
+      clientSecret: '1587cc7fefd721dcb6757c98100f0e189a0893d2',
+      repo: 'blog-talk',
+      owner: 'konieshadow',
+      admin: ['konieshadow'],
+      id: 'comellia.com',      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    
+    gitalk.render('gitalk-container');
+  }
+
   render() {
     const post = this.props.data.markdownRemark;
     const author = get(this.props, 'data.site.siteMetadata.author');
@@ -56,6 +73,7 @@ class BlogPostTemplate extends React.Component {
             {userConfig.showShareButtons && (
               <Share url={url} title={post.frontmatter.title} />
             )}
+            <div id="gitalk-container"></div>
           </Card>
 
           <PageNav>
