@@ -16,6 +16,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
           <link rel="stylesheet" href="/live2d/css/live2d.css" />
+          <script src="/js/matomo.js" />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
